@@ -258,7 +258,7 @@ public class NamespaceImpl extends URIElementImpl implements Namespace {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		return prefix+" : <"+uri+">";
+		return prefix+" : <"+getURI()+">";
 	}
 
 } //NamespaceImpl

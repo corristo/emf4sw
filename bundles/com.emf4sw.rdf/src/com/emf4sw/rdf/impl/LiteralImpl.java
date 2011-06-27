@@ -372,7 +372,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer();
-		result.append("\"" + lexicalForm + "\"");
+		result.append("\"" + getLexicalForm() + "\"");
 		if (getLang() != null && !getLang().trim().isEmpty()) {
 			result.append("@" + getLang());
 		}

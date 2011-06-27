@@ -457,7 +457,7 @@ public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 		
-		return "<"+uri+">";
+		return "<"+getURI()+">";
 	}
 
 } //NamedGraphImpl

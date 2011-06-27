@@ -149,6 +149,7 @@ public abstract class URIElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated NOT
 	 */
 	public String getLocalName() {
+		final String uri = getURI();
 		return uri.substring(uri.lastIndexOf('/'), uri.length());
 	}
 
@@ -230,7 +231,7 @@ public abstract class URIElementImpl extends MinimalEObjectImpl.Container implem
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 		
-		return "<"+uri+">";
+		return "<"+getURI()+">";
 	}
 	
 } //URIElementImpl

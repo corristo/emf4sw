@@ -258,7 +258,7 @@ public class BlankNodeImpl extends SubjectNodeImpl implements BlankNode {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 		
-		return "_:"+nodeID;
+		return "_:"+getNodeID();
 	}
 
 } //BlankNodeImpl

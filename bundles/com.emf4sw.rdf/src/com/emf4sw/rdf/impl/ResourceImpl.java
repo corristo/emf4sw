@@ -477,7 +477,7 @@ public class ResourceImpl extends SubjectNodeImpl implements Resource {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 		
-		return "<"+uri+">";
+		return "<"+getURI()+">";
 	}
 
 } //ResourceImpl

@@ -525,7 +525,7 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 		
-		return "<"+uri+">";
+		return "<"+getURI()+">";
 	}
 
 } //RDFGraphImpl
