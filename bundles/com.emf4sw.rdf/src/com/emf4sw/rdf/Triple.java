@@ -10,6 +10,7 @@
  *******************************************************************************/
 package com.emf4sw.rdf;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -29,9 +30,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see com.emf4sw.rdf.RDFPackage#getTriple()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface Triple extends EObject {
+public interface Triple extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Subject</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link com.emf4sw.rdf.SubjectNode#getSubjectOf <em>Subject Of</em>}'.

@@ -10,6 +10,7 @@
  *******************************************************************************/
 package com.emf4sw.rdf;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -29,9 +30,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see com.emf4sw.rdf.RDFPackage#getNode()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface Node extends EObject {
+public interface Node extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->

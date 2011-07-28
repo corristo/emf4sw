@@ -56,26 +56,6 @@ import com.emf4sw.rdf.Triple;
  */
 public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	/**
-	 * The cached value of the '{@link #getNodes() <em>Nodes</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNodes()
-	 * @generated
-	 * @ordered
-	 */
-	protected FeatureMap nodes;
-
-	/**
-	 * The cached value of the '{@link #getTriples() <em>Triples</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTriples()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Triple> triples;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -100,10 +80,7 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	 * @generated
 	 */
 	public FeatureMap getNodes() {
-		if (nodes == null) {
-			nodes = new BasicFeatureMap(this, RDFPackage.RDF_GRAPH__NODES);
-		}
-		return nodes;
+		return (FeatureMap)eGet(RDFPackage.Literals.RDF_GRAPH__NODES, true);
 	}
 
 	/**
@@ -111,8 +88,9 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Resource> getResources() {
-		return getNodes().list(RDFPackage.Literals.RDF_GRAPH__RESOURCES);
+		return (EList<Resource>)eGet(RDFPackage.Literals.RDF_GRAPH__RESOURCES, true);
 	}
 
 	/**
@@ -120,8 +98,9 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Property> getProperties() {
-		return getNodes().list(RDFPackage.Literals.RDF_GRAPH__PROPERTIES);
+		return (EList<Property>)eGet(RDFPackage.Literals.RDF_GRAPH__PROPERTIES, true);
 	}
 
 	/**
@@ -129,8 +108,9 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<BlankNode> getBlankNodes() {
-		return getNodes().list(RDFPackage.Literals.RDF_GRAPH__BLANK_NODES);
+		return (EList<BlankNode>)eGet(RDFPackage.Literals.RDF_GRAPH__BLANK_NODES, true);
 	}
 
 	/**
@@ -138,8 +118,9 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Datatype> getDatatypes() {
-		return getNodes().list(RDFPackage.Literals.RDF_GRAPH__DATATYPES);
+		return (EList<Datatype>)eGet(RDFPackage.Literals.RDF_GRAPH__DATATYPES, true);
 	}
 
 	/**
@@ -147,8 +128,9 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Literal> getLiterals() {
-		return getNodes().list(RDFPackage.Literals.RDF_GRAPH__LITERALS);
+		return (EList<Literal>)eGet(RDFPackage.Literals.RDF_GRAPH__LITERALS, true);
 	}
 
 	/**
@@ -156,11 +138,9 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Triple> getTriples() {
-		if (triples == null) {
-			triples = new EObjectContainmentWithInverseEList<Triple>(Triple.class, this, RDFPackage.RDF_GRAPH__TRIPLES, RDFPackage.TRIPLE__GRAPH);
-		}
-		return triples;
+		return (EList<Triple>)eGet(RDFPackage.Literals.RDF_GRAPH__TRIPLES, true);
 	}
 
 	/**
@@ -341,179 +321,6 @@ public abstract class RDFGraphImpl extends URIElementImpl implements RDFGraph {
 			this.getBlankNodes().add((BlankNode) obj);
 		}
 		return obj instanceof BlankNode ? (BlankNode)obj : null;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.RDF_GRAPH__RESOURCES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getResources()).basicAdd(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__BLANK_NODES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getBlankNodes()).basicAdd(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__LITERALS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getLiterals()).basicAdd(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__TRIPLES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getTriples()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.RDF_GRAPH__NODES:
-				return ((InternalEList<?>)getNodes()).basicRemove(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__RESOURCES:
-				return ((InternalEList<?>)getResources()).basicRemove(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__PROPERTIES:
-				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__BLANK_NODES:
-				return ((InternalEList<?>)getBlankNodes()).basicRemove(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__DATATYPES:
-				return ((InternalEList<?>)getDatatypes()).basicRemove(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__LITERALS:
-				return ((InternalEList<?>)getLiterals()).basicRemove(otherEnd, msgs);
-			case RDFPackage.RDF_GRAPH__TRIPLES:
-				return ((InternalEList<?>)getTriples()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.RDF_GRAPH__NODES:
-				if (coreType) return getNodes();
-				return ((FeatureMap.Internal)getNodes()).getWrapper();
-			case RDFPackage.RDF_GRAPH__RESOURCES:
-				return getResources();
-			case RDFPackage.RDF_GRAPH__PROPERTIES:
-				return getProperties();
-			case RDFPackage.RDF_GRAPH__BLANK_NODES:
-				return getBlankNodes();
-			case RDFPackage.RDF_GRAPH__DATATYPES:
-				return getDatatypes();
-			case RDFPackage.RDF_GRAPH__LITERALS:
-				return getLiterals();
-			case RDFPackage.RDF_GRAPH__TRIPLES:
-				return getTriples();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.RDF_GRAPH__NODES:
-				((FeatureMap.Internal)getNodes()).set(newValue);
-				return;
-			case RDFPackage.RDF_GRAPH__RESOURCES:
-				getResources().clear();
-				getResources().addAll((Collection<? extends Resource>)newValue);
-				return;
-			case RDFPackage.RDF_GRAPH__PROPERTIES:
-				getProperties().clear();
-				getProperties().addAll((Collection<? extends Property>)newValue);
-				return;
-			case RDFPackage.RDF_GRAPH__BLANK_NODES:
-				getBlankNodes().clear();
-				getBlankNodes().addAll((Collection<? extends BlankNode>)newValue);
-				return;
-			case RDFPackage.RDF_GRAPH__DATATYPES:
-				getDatatypes().clear();
-				getDatatypes().addAll((Collection<? extends Datatype>)newValue);
-				return;
-			case RDFPackage.RDF_GRAPH__LITERALS:
-				getLiterals().clear();
-				getLiterals().addAll((Collection<? extends Literal>)newValue);
-				return;
-			case RDFPackage.RDF_GRAPH__TRIPLES:
-				getTriples().clear();
-				getTriples().addAll((Collection<? extends Triple>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.RDF_GRAPH__NODES:
-				getNodes().clear();
-				return;
-			case RDFPackage.RDF_GRAPH__RESOURCES:
-				getResources().clear();
-				return;
-			case RDFPackage.RDF_GRAPH__PROPERTIES:
-				getProperties().clear();
-				return;
-			case RDFPackage.RDF_GRAPH__BLANK_NODES:
-				getBlankNodes().clear();
-				return;
-			case RDFPackage.RDF_GRAPH__DATATYPES:
-				getDatatypes().clear();
-				return;
-			case RDFPackage.RDF_GRAPH__LITERALS:
-				getLiterals().clear();
-				return;
-			case RDFPackage.RDF_GRAPH__TRIPLES:
-				getTriples().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.RDF_GRAPH__NODES:
-				return nodes != null && !nodes.isEmpty();
-			case RDFPackage.RDF_GRAPH__RESOURCES:
-				return !getResources().isEmpty();
-			case RDFPackage.RDF_GRAPH__PROPERTIES:
-				return !getProperties().isEmpty();
-			case RDFPackage.RDF_GRAPH__BLANK_NODES:
-				return !getBlankNodes().isEmpty();
-			case RDFPackage.RDF_GRAPH__DATATYPES:
-				return !getDatatypes().isEmpty();
-			case RDFPackage.RDF_GRAPH__LITERALS:
-				return !getLiterals().isEmpty();
-			case RDFPackage.RDF_GRAPH__TRIPLES:
-				return triples != null && !triples.isEmpty();
-		}
-		return super.eIsSet(featureID);
 	}
 
 	/**

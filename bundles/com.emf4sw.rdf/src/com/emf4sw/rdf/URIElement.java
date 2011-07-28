@@ -10,6 +10,7 @@
  *******************************************************************************/
 package com.emf4sw.rdf;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -27,9 +28,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see com.emf4sw.rdf.RDFPackage#getURIElement()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface URIElement extends EObject {
+public interface URIElement extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>URI</b></em>' attribute.
 	 * <!-- begin-user-doc -->

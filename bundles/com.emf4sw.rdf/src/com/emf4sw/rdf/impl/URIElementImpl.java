@@ -12,6 +12,7 @@ package com.emf4sw.rdf.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -34,37 +35,7 @@ import com.emf4sw.rdf.URIElement;
  *
  * @generated
  */
-public abstract class URIElementImpl extends MinimalEObjectImpl.Container implements URIElement {
-	/**
-	 * The default value of the '{@link #getURI() <em>URI</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getURI()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URI_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getURI() <em>URI</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getURI()
-	 * @generated
-	 * @ordered
-	 */
-	protected String uri = URI_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getNamespace() <em>Namespace</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNamespace()
-	 * @generated
-	 * @ordered
-	 */
-	protected Namespace namespace;
-
+public abstract class URIElementImpl extends CDOObjectImpl implements URIElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -89,8 +60,18 @@ public abstract class URIElementImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getURI() {
-		return uri;
+		return (String)eGet(RDFPackage.Literals.URI_ELEMENT__URI, true);
 	}
 
 	/**
@@ -99,10 +80,7 @@ public abstract class URIElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	public void setURI(String newURI) {
-		String oldURI = uri;
-		uri = newURI;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.URI_ELEMENT__URI, oldURI, uri));
+		eSet(RDFPackage.Literals.URI_ELEMENT__URI, newURI);
 	}
 
 	/**
@@ -111,24 +89,7 @@ public abstract class URIElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	public Namespace getNamespace() {
-		if (namespace != null && namespace.eIsProxy()) {
-			InternalEObject oldNamespace = (InternalEObject)namespace;
-			namespace = (Namespace)eResolveProxy(oldNamespace);
-			if (namespace != oldNamespace) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RDFPackage.URI_ELEMENT__NAMESPACE, oldNamespace, namespace));
-			}
-		}
-		return namespace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Namespace basicGetNamespace() {
-		return namespace;
+		return (Namespace)eGet(RDFPackage.Literals.URI_ELEMENT__NAMESPACE, true);
 	}
 
 	/**
@@ -137,10 +98,7 @@ public abstract class URIElementImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	public void setNamespace(Namespace newNamespace) {
-		Namespace oldNamespace = namespace;
-		namespace = newNamespace;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.URI_ELEMENT__NAMESPACE, oldNamespace, namespace));
+		eSet(RDFPackage.Literals.URI_ELEMENT__NAMESPACE, newNamespace);
 	}
 
 	/**
@@ -151,75 +109,6 @@ public abstract class URIElementImpl extends MinimalEObjectImpl.Container implem
 	public String getLocalName() {
 		final String uri = getURI();
 		return uri.substring(uri.lastIndexOf('/'), uri.length());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.URI_ELEMENT__URI:
-				return getURI();
-			case RDFPackage.URI_ELEMENT__NAMESPACE:
-				if (resolve) return getNamespace();
-				return basicGetNamespace();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.URI_ELEMENT__URI:
-				setURI((String)newValue);
-				return;
-			case RDFPackage.URI_ELEMENT__NAMESPACE:
-				setNamespace((Namespace)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.URI_ELEMENT__URI:
-				setURI(URI_EDEFAULT);
-				return;
-			case RDFPackage.URI_ELEMENT__NAMESPACE:
-				setNamespace((Namespace)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.URI_ELEMENT__URI:
-				return URI_EDEFAULT == null ? uri != null : !URI_EDEFAULT.equals(uri);
-			case RDFPackage.URI_ELEMENT__NAMESPACE:
-				return namespace != null;
-		}
-		return super.eIsSet(featureID);
 	}
 
 	/**

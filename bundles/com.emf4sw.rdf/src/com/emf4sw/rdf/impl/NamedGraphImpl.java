@@ -51,66 +51,6 @@ import com.emf4sw.rdf.operations.RDFUtil;
  */
 public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	/**
-	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LABEL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLabel()
-	 * @generated
-	 * @ordered
-	 */
-	protected String label = LABEL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getComment() <em>Comment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComment()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COMMENT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getComment() <em>Comment</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComment()
-	 * @generated
-	 * @ordered
-	 */
-	protected String comment = COMMENT_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getObjectOf() <em>Object Of</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getObjectOf()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Triple> objectOf;
-
-	/**
-	 * The cached value of the '{@link #getDocument() <em>Document</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDocument()
-	 * @generated
-	 * @ordered
-	 */
-	protected DocumentGraph document;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -135,7 +75,7 @@ public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	 * @generated
 	 */
 	public String getLabel() {
-		return label;
+		return (String)eGet(RDFPackage.Literals.NODE__LABEL, true);
 	}
 
 	/**
@@ -144,10 +84,7 @@ public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	 * @generated
 	 */
 	public void setLabel(String newLabel) {
-		String oldLabel = label;
-		label = newLabel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.NAMED_GRAPH__LABEL, oldLabel, label));
+		eSet(RDFPackage.Literals.NODE__LABEL, newLabel);
 	}
 
 	/**
@@ -156,7 +93,7 @@ public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	 * @generated
 	 */
 	public String getComment() {
-		return comment;
+		return (String)eGet(RDFPackage.Literals.NODE__COMMENT, true);
 	}
 
 	/**
@@ -165,10 +102,7 @@ public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	 * @generated
 	 */
 	public void setComment(String newComment) {
-		String oldComment = comment;
-		comment = newComment;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.NAMED_GRAPH__COMMENT, oldComment, comment));
+		eSet(RDFPackage.Literals.NODE__COMMENT, newComment);
 	}
 
 	/**
@@ -219,11 +153,9 @@ public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Triple> getObjectOf() {
-		if (objectOf == null) {
-			objectOf = new EObjectWithInverseResolvingEList<Triple>(Triple.class, this, RDFPackage.NAMED_GRAPH__OBJECT_OF, RDFPackage.TRIPLE__OBJECT);
-		}
-		return objectOf;
+		return (EList<Triple>)eGet(RDFPackage.Literals.NODE__OBJECT_OF, true);
 	}
 
 	/**
@@ -232,39 +164,7 @@ public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	 * @generated
 	 */
 	public DocumentGraph getDocument() {
-		if (document != null && document.eIsProxy()) {
-			InternalEObject oldDocument = (InternalEObject)document;
-			document = (DocumentGraph)eResolveProxy(oldDocument);
-			if (document != oldDocument) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RDFPackage.NAMED_GRAPH__DOCUMENT, oldDocument, document));
-			}
-		}
-		return document;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DocumentGraph basicGetDocument() {
-		return document;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetDocument(DocumentGraph newDocument, NotificationChain msgs) {
-		DocumentGraph oldDocument = document;
-		document = newDocument;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RDFPackage.NAMED_GRAPH__DOCUMENT, oldDocument, newDocument);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		return (DocumentGraph)eGet(RDFPackage.Literals.NAMED_GRAPH__DOCUMENT, true);
 	}
 
 	/**
@@ -273,143 +173,7 @@ public class NamedGraphImpl extends RDFGraphImpl implements NamedGraph {
 	 * @generated
 	 */
 	public void setDocument(DocumentGraph newDocument) {
-		if (newDocument != document) {
-			NotificationChain msgs = null;
-			if (document != null)
-				msgs = ((InternalEObject)document).eInverseRemove(this, RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS, DocumentGraph.class, msgs);
-			if (newDocument != null)
-				msgs = ((InternalEObject)newDocument).eInverseAdd(this, RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS, DocumentGraph.class, msgs);
-			msgs = basicSetDocument(newDocument, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.NAMED_GRAPH__DOCUMENT, newDocument, newDocument));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.NAMED_GRAPH__OBJECT_OF:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getObjectOf()).basicAdd(otherEnd, msgs);
-			case RDFPackage.NAMED_GRAPH__DOCUMENT:
-				if (document != null)
-					msgs = ((InternalEObject)document).eInverseRemove(this, RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS, DocumentGraph.class, msgs);
-				return basicSetDocument((DocumentGraph)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.NAMED_GRAPH__OBJECT_OF:
-				return ((InternalEList<?>)getObjectOf()).basicRemove(otherEnd, msgs);
-			case RDFPackage.NAMED_GRAPH__DOCUMENT:
-				return basicSetDocument(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.NAMED_GRAPH__LABEL:
-				return getLabel();
-			case RDFPackage.NAMED_GRAPH__COMMENT:
-				return getComment();
-			case RDFPackage.NAMED_GRAPH__OBJECT_OF:
-				return getObjectOf();
-			case RDFPackage.NAMED_GRAPH__DOCUMENT:
-				if (resolve) return getDocument();
-				return basicGetDocument();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.NAMED_GRAPH__LABEL:
-				setLabel((String)newValue);
-				return;
-			case RDFPackage.NAMED_GRAPH__COMMENT:
-				setComment((String)newValue);
-				return;
-			case RDFPackage.NAMED_GRAPH__OBJECT_OF:
-				getObjectOf().clear();
-				getObjectOf().addAll((Collection<? extends Triple>)newValue);
-				return;
-			case RDFPackage.NAMED_GRAPH__DOCUMENT:
-				setDocument((DocumentGraph)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.NAMED_GRAPH__LABEL:
-				setLabel(LABEL_EDEFAULT);
-				return;
-			case RDFPackage.NAMED_GRAPH__COMMENT:
-				setComment(COMMENT_EDEFAULT);
-				return;
-			case RDFPackage.NAMED_GRAPH__OBJECT_OF:
-				getObjectOf().clear();
-				return;
-			case RDFPackage.NAMED_GRAPH__DOCUMENT:
-				setDocument((DocumentGraph)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.NAMED_GRAPH__LABEL:
-				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
-			case RDFPackage.NAMED_GRAPH__COMMENT:
-				return COMMENT_EDEFAULT == null ? comment != null : !COMMENT_EDEFAULT.equals(comment);
-			case RDFPackage.NAMED_GRAPH__OBJECT_OF:
-				return objectOf != null && !objectOf.isEmpty();
-			case RDFPackage.NAMED_GRAPH__DOCUMENT:
-				return document != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(RDFPackage.Literals.NAMED_GRAPH__DOCUMENT, newDocument);
 	}
 
 	/**

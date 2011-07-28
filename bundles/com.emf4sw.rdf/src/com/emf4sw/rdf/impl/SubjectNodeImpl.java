@@ -44,16 +44,6 @@ import com.emf4sw.rdf.vocabulary.RDF;
  */
 public abstract class SubjectNodeImpl extends NodeImpl implements SubjectNode {
 	/**
-	 * The cached value of the '{@link #getSubjectOf() <em>Subject Of</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubjectOf()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Triple> subjectOf;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -77,11 +67,9 @@ public abstract class SubjectNodeImpl extends NodeImpl implements SubjectNode {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Triple> getSubjectOf() {
-		if (subjectOf == null) {
-			subjectOf = new EObjectWithInverseResolvingEList<Triple>(Triple.class, this, RDFPackage.SUBJECT_NODE__SUBJECT_OF, RDFPackage.TRIPLE__SUBJECT);
-		}
-		return subjectOf;
+		return (EList<Triple>)eGet(RDFPackage.Literals.SUBJECT_NODE__SUBJECT_OF, true);
 	}
 
 	/**
@@ -167,95 +155,6 @@ public abstract class SubjectNodeImpl extends NodeImpl implements SubjectNode {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.SUBJECT_NODE__SUBJECT_OF:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSubjectOf()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.SUBJECT_NODE__SUBJECT_OF:
-				return ((InternalEList<?>)getSubjectOf()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.SUBJECT_NODE__SUBJECT_OF:
-				return getSubjectOf();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.SUBJECT_NODE__SUBJECT_OF:
-				getSubjectOf().clear();
-				getSubjectOf().addAll((Collection<? extends Triple>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.SUBJECT_NODE__SUBJECT_OF:
-				getSubjectOf().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.SUBJECT_NODE__SUBJECT_OF:
-				return subjectOf != null && !subjectOf.isEmpty();
-		}
-		return super.eIsSet(featureID);
 	}
 
 } //SubjectNodeImpl

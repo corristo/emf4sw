@@ -49,26 +49,6 @@ import com.emf4sw.rdf.operations.RDFUtil;
  */
 public class DocumentGraphImpl extends RDFGraphImpl implements DocumentGraph {
 	/**
-	 * The cached value of the '{@link #getNamespaces() <em>Namespaces</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNamespaces()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Namespace> namespaces;
-
-	/**
-	 * The cached value of the '{@link #getSubGraphs() <em>Sub Graphs</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubGraphs()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<NamedGraph> subGraphs;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -92,11 +72,9 @@ public class DocumentGraphImpl extends RDFGraphImpl implements DocumentGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Namespace> getNamespaces() {
-		if (namespaces == null) {
-			namespaces = new EObjectContainmentWithInverseEList<Namespace>(Namespace.class, this, RDFPackage.DOCUMENT_GRAPH__NAMESPACES, RDFPackage.NAMESPACE__GRAPH);
-		}
-		return namespaces;
+		return (EList<Namespace>)eGet(RDFPackage.Literals.DOCUMENT_GRAPH__NAMESPACES, true);
 	}
 
 	/**
@@ -104,11 +82,9 @@ public class DocumentGraphImpl extends RDFGraphImpl implements DocumentGraph {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<NamedGraph> getSubGraphs() {
-		if (subGraphs == null) {
-			subGraphs = new EObjectWithInverseResolvingEList<NamedGraph>(NamedGraph.class, this, RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS, RDFPackage.NAMED_GRAPH__DOCUMENT);
-		}
-		return subGraphs;
+		return (EList<NamedGraph>)eGet(RDFPackage.Literals.DOCUMENT_GRAPH__SUB_GRAPHS, true);
 	}
 
 	/**
@@ -181,110 +157,6 @@ public class DocumentGraphImpl extends RDFGraphImpl implements DocumentGraph {
 		final Collection<Property> all = 
 			EcoreUtil.getObjectsByType(getNodes(), RDFPackage.eINSTANCE.getProperty());
 		return new BasicEList<Property>(all);
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.DOCUMENT_GRAPH__NAMESPACES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getNamespaces()).basicAdd(otherEnd, msgs);
-			case RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSubGraphs()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.DOCUMENT_GRAPH__NAMESPACES:
-				return ((InternalEList<?>)getNamespaces()).basicRemove(otherEnd, msgs);
-			case RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS:
-				return ((InternalEList<?>)getSubGraphs()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.DOCUMENT_GRAPH__NAMESPACES:
-				return getNamespaces();
-			case RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS:
-				return getSubGraphs();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.DOCUMENT_GRAPH__NAMESPACES:
-				getNamespaces().clear();
-				getNamespaces().addAll((Collection<? extends Namespace>)newValue);
-				return;
-			case RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS:
-				getSubGraphs().clear();
-				getSubGraphs().addAll((Collection<? extends NamedGraph>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.DOCUMENT_GRAPH__NAMESPACES:
-				getNamespaces().clear();
-				return;
-			case RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS:
-				getSubGraphs().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.DOCUMENT_GRAPH__NAMESPACES:
-				return namespaces != null && !namespaces.isEmpty();
-			case RDFPackage.DOCUMENT_GRAPH__SUB_GRAPHS:
-				return subGraphs != null && !subGraphs.isEmpty();
-		}
-		return super.eIsSet(featureID);
 	}
 
 } //DocumentGraphImpl

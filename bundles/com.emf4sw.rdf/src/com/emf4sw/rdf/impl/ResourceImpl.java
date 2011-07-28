@@ -49,36 +49,6 @@ import com.emf4sw.rdf.vocabulary.RDF;
  */
 public class ResourceImpl extends SubjectNodeImpl implements Resource {
 	/**
-	 * The default value of the '{@link #getURI() <em>URI</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getURI()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URI_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getURI() <em>URI</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getURI()
-	 * @generated
-	 * @ordered
-	 */
-	protected String uri = URI_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getNamespace() <em>Namespace</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNamespace()
-	 * @generated
-	 * @ordered
-	 */
-	protected Namespace namespace;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -103,7 +73,7 @@ public class ResourceImpl extends SubjectNodeImpl implements Resource {
 	 * @generated
 	 */
 	public String getURI() {
-		return uri;
+		return (String)eGet(RDFPackage.Literals.URI_ELEMENT__URI, true);
 	}
 
 	/**
@@ -112,10 +82,7 @@ public class ResourceImpl extends SubjectNodeImpl implements Resource {
 	 * @generated
 	 */
 	public void setURI(String newURI) {
-		String oldURI = uri;
-		uri = newURI;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.RESOURCE__URI, oldURI, uri));
+		eSet(RDFPackage.Literals.URI_ELEMENT__URI, newURI);
 	}
 
 	/**
@@ -124,24 +91,7 @@ public class ResourceImpl extends SubjectNodeImpl implements Resource {
 	 * @generated
 	 */
 	public Namespace getNamespace() {
-		if (namespace != null && namespace.eIsProxy()) {
-			InternalEObject oldNamespace = (InternalEObject)namespace;
-			namespace = (Namespace)eResolveProxy(oldNamespace);
-			if (namespace != oldNamespace) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RDFPackage.RESOURCE__NAMESPACE, oldNamespace, namespace));
-			}
-		}
-		return namespace;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Namespace basicGetNamespace() {
-		return namespace;
+		return (Namespace)eGet(RDFPackage.Literals.URI_ELEMENT__NAMESPACE, true);
 	}
 
 	/**
@@ -150,10 +100,7 @@ public class ResourceImpl extends SubjectNodeImpl implements Resource {
 	 * @generated
 	 */
 	public void setNamespace(Namespace newNamespace) {
-		Namespace oldNamespace = namespace;
-		namespace = newNamespace;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.RESOURCE__NAMESPACE, oldNamespace, namespace));
+		eSet(RDFPackage.Literals.URI_ELEMENT__NAMESPACE, newNamespace);
 	}
 
 	/**
@@ -162,18 +109,7 @@ public class ResourceImpl extends SubjectNodeImpl implements Resource {
 	 * @generated
 	 */
 	public RDFGraph getGraph() {
-		if (eContainerFeatureID() != RDFPackage.RESOURCE__GRAPH) return null;
-		return (RDFGraph)eContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGraph(RDFGraph newGraph, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newGraph, RDFPackage.RESOURCE__GRAPH, msgs);
-		return msgs;
+		return (RDFGraph)eGet(RDFPackage.Literals.RESOURCE__GRAPH, true);
 	}
 
 	/**
@@ -182,19 +118,7 @@ public class ResourceImpl extends SubjectNodeImpl implements Resource {
 	 * @generated
 	 */
 	public void setGraph(RDFGraph newGraph) {
-		if (newGraph != eInternalContainer() || (eContainerFeatureID() != RDFPackage.RESOURCE__GRAPH && newGraph != null)) {
-			if (EcoreUtil.isAncestor(this, newGraph))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newGraph != null)
-				msgs = ((InternalEObject)newGraph).eInverseAdd(this, RDFPackage.RDF_GRAPH__RESOURCES, RDFGraph.class, msgs);
-			msgs = basicSetGraph(newGraph, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.RESOURCE__GRAPH, newGraph, newGraph));
+		eSet(RDFPackage.Literals.RESOURCE__GRAPH, newGraph);
 	}
 
 	/**
@@ -322,116 +246,10 @@ public class ResourceImpl extends SubjectNodeImpl implements Resource {
 			case RDFPackage.RESOURCE__GRAPH:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetGraph((RDFGraph)otherEnd, msgs);
+				//return basicSetGraph((RDFGraph)otherEnd, msgs);
+				return eBasicSetContainer(otherEnd, RDFPackage.RESOURCE__GRAPH, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.RESOURCE__GRAPH:
-				return basicSetGraph(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case RDFPackage.RESOURCE__GRAPH:
-				return eInternalContainer().eInverseRemove(this, RDFPackage.RDF_GRAPH__RESOURCES, RDFGraph.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.RESOURCE__URI:
-				return getURI();
-			case RDFPackage.RESOURCE__NAMESPACE:
-				if (resolve) return getNamespace();
-				return basicGetNamespace();
-			case RDFPackage.RESOURCE__GRAPH:
-				return getGraph();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.RESOURCE__URI:
-				setURI((String)newValue);
-				return;
-			case RDFPackage.RESOURCE__NAMESPACE:
-				setNamespace((Namespace)newValue);
-				return;
-			case RDFPackage.RESOURCE__GRAPH:
-				setGraph((RDFGraph)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.RESOURCE__URI:
-				setURI(URI_EDEFAULT);
-				return;
-			case RDFPackage.RESOURCE__NAMESPACE:
-				setNamespace((Namespace)null);
-				return;
-			case RDFPackage.RESOURCE__GRAPH:
-				setGraph((RDFGraph)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.RESOURCE__URI:
-				return URI_EDEFAULT == null ? uri != null : !URI_EDEFAULT.equals(uri);
-			case RDFPackage.RESOURCE__NAMESPACE:
-				return namespace != null;
-			case RDFPackage.RESOURCE__GRAPH:
-				return getGraph() != null;
-		}
-		return super.eIsSet(featureID);
 	}
 
 	/**

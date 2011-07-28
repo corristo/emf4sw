@@ -35,16 +35,6 @@ import com.emf4sw.rdf.RDFPackage;
  */
 public class RDFAltImpl extends RDFSContainerImpl implements RDFAlt {
 	/**
-	 * The cached value of the '{@link #getElements() <em>Elements</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Node> elements;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -68,71 +58,9 @@ public class RDFAltImpl extends RDFSContainerImpl implements RDFAlt {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Node> getElements() {
-		if (elements == null) {
-			elements = new EObjectResolvingEList<Node>(Node.class, this, RDFPackage.RDF_ALT__ELEMENTS);
-		}
-		return elements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.RDF_ALT__ELEMENTS:
-				return getElements();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.RDF_ALT__ELEMENTS:
-				getElements().clear();
-				getElements().addAll((Collection<? extends Node>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.RDF_ALT__ELEMENTS:
-				getElements().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.RDF_ALT__ELEMENTS:
-				return elements != null && !elements.isEmpty();
-		}
-		return super.eIsSet(featureID);
+	public EList<Node> getElements() {
+		return (EList<Node>)eGet(RDFPackage.Literals.RDF_ALT__ELEMENTS, true);
 	}
 
 } //RDFAltImpl

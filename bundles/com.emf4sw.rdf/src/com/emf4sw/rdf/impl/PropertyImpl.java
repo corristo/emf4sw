@@ -38,16 +38,6 @@ import com.emf4sw.rdf.Triple;
  */
 public class PropertyImpl extends ResourceImpl implements Property {
 	/**
-	 * The cached value of the '{@link #getPredicateOf() <em>Predicate Of</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPredicateOf()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Triple> predicateOf;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -71,100 +61,9 @@ public class PropertyImpl extends ResourceImpl implements Property {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Triple> getPredicateOf() {
-		if (predicateOf == null) {
-			predicateOf = new EObjectWithInverseResolvingEList<Triple>(Triple.class, this, RDFPackage.PROPERTY__PREDICATE_OF, RDFPackage.TRIPLE__PREDICATE);
-		}
-		return predicateOf;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.PROPERTY__PREDICATE_OF:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getPredicateOf()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.PROPERTY__PREDICATE_OF:
-				return ((InternalEList<?>)getPredicateOf()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.PROPERTY__PREDICATE_OF:
-				return getPredicateOf();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.PROPERTY__PREDICATE_OF:
-				getPredicateOf().clear();
-				getPredicateOf().addAll((Collection<? extends Triple>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.PROPERTY__PREDICATE_OF:
-				getPredicateOf().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.PROPERTY__PREDICATE_OF:
-				return predicateOf != null && !predicateOf.isEmpty();
-		}
-		return super.eIsSet(featureID);
+		return (EList<Triple>)eGet(RDFPackage.Literals.PROPERTY__PREDICATE_OF, true);
 	}
 	
 } //PropertyImpl

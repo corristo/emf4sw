@@ -40,56 +40,6 @@ import com.emf4sw.rdf.RDFPackage;
  */
 public class LiteralImpl extends NodeImpl implements Literal {
 	/**
-	 * The default value of the '{@link #getLexicalForm() <em>Lexical Form</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLexicalForm()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LEXICAL_FORM_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLexicalForm() <em>Lexical Form</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLexicalForm()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lexicalForm = LEXICAL_FORM_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getLang() <em>Lang</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLang()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LANG_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLang() <em>Lang</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLang()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lang = LANG_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getDatatype() <em>Datatype</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDatatype()
-	 * @generated
-	 * @ordered
-	 */
-	protected Datatype datatype;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -114,7 +64,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 	 * @generated
 	 */
 	public String getLexicalForm() {
-		return lexicalForm;
+		return (String)eGet(RDFPackage.Literals.LITERAL__LEXICAL_FORM, true);
 	}
 
 	/**
@@ -123,10 +73,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 	 * @generated
 	 */
 	public void setLexicalForm(String newLexicalForm) {
-		String oldLexicalForm = lexicalForm;
-		lexicalForm = newLexicalForm;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.LITERAL__LEXICAL_FORM, oldLexicalForm, lexicalForm));
+		eSet(RDFPackage.Literals.LITERAL__LEXICAL_FORM, newLexicalForm);
 	}
 
 	/**
@@ -135,7 +82,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 	 * @generated
 	 */
 	public String getLang() {
-		return lang;
+		return (String)eGet(RDFPackage.Literals.LITERAL__LANG, true);
 	}
 
 	/**
@@ -144,10 +91,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 	 * @generated
 	 */
 	public void setLang(String newLang) {
-		String oldLang = lang;
-		lang = newLang;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.LITERAL__LANG, oldLang, lang));
+		eSet(RDFPackage.Literals.LITERAL__LANG, newLang);
 	}
 
 	/**
@@ -156,24 +100,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 	 * @generated
 	 */
 	public Datatype getDatatype() {
-		if (datatype != null && datatype.eIsProxy()) {
-			InternalEObject oldDatatype = (InternalEObject)datatype;
-			datatype = (Datatype)eResolveProxy(oldDatatype);
-			if (datatype != oldDatatype) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RDFPackage.LITERAL__DATATYPE, oldDatatype, datatype));
-			}
-		}
-		return datatype;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Datatype basicGetDatatype() {
-		return datatype;
+		return (Datatype)eGet(RDFPackage.Literals.LITERAL__DATATYPE, true);
 	}
 
 	/**
@@ -182,10 +109,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 	 * @generated
 	 */
 	public void setDatatype(Datatype newDatatype) {
-		Datatype oldDatatype = datatype;
-		datatype = newDatatype;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.LITERAL__DATATYPE, oldDatatype, datatype));
+		eSet(RDFPackage.Literals.LITERAL__DATATYPE, newDatatype);
 	}
 	
 	/**
@@ -194,18 +118,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 	 * @generated
 	 */
 	public RDFGraph getGraph() {
-		if (eContainerFeatureID() != RDFPackage.LITERAL__GRAPH) return null;
-		return (RDFGraph)eContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGraph(RDFGraph newGraph, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newGraph, RDFPackage.LITERAL__GRAPH, msgs);
-		return msgs;
+		return (RDFGraph)eGet(RDFPackage.Literals.LITERAL__GRAPH, true);
 	}
 
 	/**
@@ -214,152 +127,7 @@ public class LiteralImpl extends NodeImpl implements Literal {
 	 * @generated
 	 */
 	public void setGraph(RDFGraph newGraph) {
-		if (newGraph != eInternalContainer() || (eContainerFeatureID() != RDFPackage.LITERAL__GRAPH && newGraph != null)) {
-			if (EcoreUtil.isAncestor(this, newGraph))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newGraph != null)
-				msgs = ((InternalEObject)newGraph).eInverseAdd(this, RDFPackage.RDF_GRAPH__LITERALS, RDFGraph.class, msgs);
-			msgs = basicSetGraph(newGraph, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.LITERAL__GRAPH, newGraph, newGraph));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.LITERAL__GRAPH:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetGraph((RDFGraph)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.LITERAL__GRAPH:
-				return basicSetGraph(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case RDFPackage.LITERAL__GRAPH:
-				return eInternalContainer().eInverseRemove(this, RDFPackage.RDF_GRAPH__LITERALS, RDFGraph.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.LITERAL__LEXICAL_FORM:
-				return getLexicalForm();
-			case RDFPackage.LITERAL__LANG:
-				return getLang();
-			case RDFPackage.LITERAL__DATATYPE:
-				if (resolve) return getDatatype();
-				return basicGetDatatype();
-			case RDFPackage.LITERAL__GRAPH:
-				return getGraph();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.LITERAL__LEXICAL_FORM:
-				setLexicalForm((String)newValue);
-				return;
-			case RDFPackage.LITERAL__LANG:
-				setLang((String)newValue);
-				return;
-			case RDFPackage.LITERAL__DATATYPE:
-				setDatatype((Datatype)newValue);
-				return;
-			case RDFPackage.LITERAL__GRAPH:
-				setGraph((RDFGraph)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.LITERAL__LEXICAL_FORM:
-				setLexicalForm(LEXICAL_FORM_EDEFAULT);
-				return;
-			case RDFPackage.LITERAL__LANG:
-				setLang(LANG_EDEFAULT);
-				return;
-			case RDFPackage.LITERAL__DATATYPE:
-				setDatatype((Datatype)null);
-				return;
-			case RDFPackage.LITERAL__GRAPH:
-				setGraph((RDFGraph)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.LITERAL__LEXICAL_FORM:
-				return LEXICAL_FORM_EDEFAULT == null ? lexicalForm != null : !LEXICAL_FORM_EDEFAULT.equals(lexicalForm);
-			case RDFPackage.LITERAL__LANG:
-				return LANG_EDEFAULT == null ? lang != null : !LANG_EDEFAULT.equals(lang);
-			case RDFPackage.LITERAL__DATATYPE:
-				return datatype != null;
-			case RDFPackage.LITERAL__GRAPH:
-				return getGraph() != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(RDFPackage.Literals.LITERAL__GRAPH, newGraph);
 	}
 
 	/**

@@ -37,26 +37,6 @@ import com.emf4sw.rdf.RDFPackage;
  */
 public class NamespaceImpl extends URIElementImpl implements Namespace {
 	/**
-	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrefix()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PREFIX_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrefix()
-	 * @generated
-	 * @ordered
-	 */
-	protected String prefix = PREFIX_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -81,7 +61,7 @@ public class NamespaceImpl extends URIElementImpl implements Namespace {
 	 * @generated
 	 */
 	public String getPrefix() {
-		return prefix;
+		return (String)eGet(RDFPackage.Literals.NAMESPACE__PREFIX, true);
 	}
 
 	/**
@@ -90,10 +70,7 @@ public class NamespaceImpl extends URIElementImpl implements Namespace {
 	 * @generated
 	 */
 	public void setPrefix(String newPrefix) {
-		String oldPrefix = prefix;
-		prefix = newPrefix;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.NAMESPACE__PREFIX, oldPrefix, prefix));
+		eSet(RDFPackage.Literals.NAMESPACE__PREFIX, newPrefix);
 	}
 
 	/**
@@ -102,18 +79,7 @@ public class NamespaceImpl extends URIElementImpl implements Namespace {
 	 * @generated
 	 */
 	public DocumentGraph getGraph() {
-		if (eContainerFeatureID() != RDFPackage.NAMESPACE__GRAPH) return null;
-		return (DocumentGraph)eContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGraph(DocumentGraph newGraph, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newGraph, RDFPackage.NAMESPACE__GRAPH, msgs);
-		return msgs;
+		return (DocumentGraph)eGet(RDFPackage.Literals.NAMESPACE__GRAPH, true);
 	}
 
 	/**
@@ -122,131 +88,7 @@ public class NamespaceImpl extends URIElementImpl implements Namespace {
 	 * @generated
 	 */
 	public void setGraph(DocumentGraph newGraph) {
-		if (newGraph != eInternalContainer() || (eContainerFeatureID() != RDFPackage.NAMESPACE__GRAPH && newGraph != null)) {
-			if (EcoreUtil.isAncestor(this, newGraph))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newGraph != null)
-				msgs = ((InternalEObject)newGraph).eInverseAdd(this, RDFPackage.DOCUMENT_GRAPH__NAMESPACES, DocumentGraph.class, msgs);
-			msgs = basicSetGraph(newGraph, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RDFPackage.NAMESPACE__GRAPH, newGraph, newGraph));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.NAMESPACE__GRAPH:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetGraph((DocumentGraph)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case RDFPackage.NAMESPACE__GRAPH:
-				return basicSetGraph(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case RDFPackage.NAMESPACE__GRAPH:
-				return eInternalContainer().eInverseRemove(this, RDFPackage.DOCUMENT_GRAPH__NAMESPACES, DocumentGraph.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case RDFPackage.NAMESPACE__PREFIX:
-				return getPrefix();
-			case RDFPackage.NAMESPACE__GRAPH:
-				return getGraph();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case RDFPackage.NAMESPACE__PREFIX:
-				setPrefix((String)newValue);
-				return;
-			case RDFPackage.NAMESPACE__GRAPH:
-				setGraph((DocumentGraph)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case RDFPackage.NAMESPACE__PREFIX:
-				setPrefix(PREFIX_EDEFAULT);
-				return;
-			case RDFPackage.NAMESPACE__GRAPH:
-				setGraph((DocumentGraph)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case RDFPackage.NAMESPACE__PREFIX:
-				return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
-			case RDFPackage.NAMESPACE__GRAPH:
-				return getGraph() != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(RDFPackage.Literals.NAMESPACE__GRAPH, newGraph);
 	}
 
 	/**

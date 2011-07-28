@@ -78,20 +78,20 @@ public class RDFFactoryImpl extends EFactoryImpl implements RDFFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case RDFPackage.NAMESPACE: return createNamespace();
-			case RDFPackage.DOCUMENT_GRAPH: return createDocumentGraph();
-			case RDFPackage.TRIPLE: return createTriple();
-			case RDFPackage.NAMED_GRAPH: return createNamedGraph();
-			case RDFPackage.BLANK_NODE: return createBlankNode();
-			case RDFPackage.TRIPLE_NODE: return createTripleNode();
-			case RDFPackage.RESOURCE: return createResource();
-			case RDFPackage.PROPERTY: return createProperty();
-			case RDFPackage.DATATYPE: return createDatatype();
-			case RDFPackage.LITERAL: return createLiteral();
-			case RDFPackage.RDF_BAG: return createRDFBag();
-			case RDFPackage.RDF_ALT: return createRDFAlt();
-			case RDFPackage.RDF_SEQ: return createRDFSeq();
-			case RDFPackage.RDF_LIST: return createRDFList();
+			case RDFPackage.NAMESPACE: return (EObject)createNamespace();
+			case RDFPackage.DOCUMENT_GRAPH: return (EObject)createDocumentGraph();
+			case RDFPackage.TRIPLE: return (EObject)createTriple();
+			case RDFPackage.NAMED_GRAPH: return (EObject)createNamedGraph();
+			case RDFPackage.BLANK_NODE: return (EObject)createBlankNode();
+			case RDFPackage.TRIPLE_NODE: return (EObject)createTripleNode();
+			case RDFPackage.RESOURCE: return (EObject)createResource();
+			case RDFPackage.PROPERTY: return (EObject)createProperty();
+			case RDFPackage.DATATYPE: return (EObject)createDatatype();
+			case RDFPackage.LITERAL: return (EObject)createLiteral();
+			case RDFPackage.RDF_BAG: return (EObject)createRDFBag();
+			case RDFPackage.RDF_ALT: return (EObject)createRDFAlt();
+			case RDFPackage.RDF_SEQ: return (EObject)createRDFSeq();
+			case RDFPackage.RDF_LIST: return (EObject)createRDFList();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
