@@ -45,7 +45,7 @@ public interface RDFPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+	String eNS_URI = "http://www.w3.org/1999/02/22-rdf-syntax-ns";
 
 	/**
 	 * The package namespace name.

@@ -49,7 +49,7 @@ public class RDFFactoryImpl extends EFactoryImpl implements RDFFactory {
 	 */
 	public static RDFFactory init() {
 		try {
-			RDFFactory theRDFFactory = (RDFFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.w3.org/1999/02/22-rdf-syntax-ns#"); 
+			RDFFactory theRDFFactory = (RDFFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.w3.org/1999/02/22-rdf-syntax-ns"); 
 			if (theRDFFactory != null) {
 				return theRDFFactory;
 			}
