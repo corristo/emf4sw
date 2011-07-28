@@ -6,6 +6,7 @@
  */
 package com.emf4sw.owl.impl;
 
+import com.emf4sw.owl.*;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -92,39 +93,39 @@ public class OWLFactoryImpl extends EFactoryImpl implements OWLFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case OWLPackage.ONTOLOGY: return createOntology();
-			case OWLPackage.OWL_CLASS: return createOWLClass();
-			case OWLPackage.OBJECT_UNION_OF: return createObjectUnionOf();
-			case OWLPackage.OBJECT_INTERSECTION_OF: return createObjectIntersectionOf();
-			case OWLPackage.OBJECT_COMPLEMENT_OF: return createObjectComplementOf();
-			case OWLPackage.OBJECT_ONE_OF: return createObjectOneOf();
-			case OWLPackage.OBJECT_SOME_VALUES_FROM: return createObjectSomeValuesFrom();
-			case OWLPackage.OBJECT_ALL_VALUES_FROM: return createObjectAllValuesFrom();
-			case OWLPackage.OBJECT_HAS_VALUE: return createObjectHasValue();
-			case OWLPackage.OBJECT_HAS_SELF: return createObjectHasSelf();
-			case OWLPackage.OBJECT_EXACT_CARDINALITY: return createObjectExactCardinality();
-			case OWLPackage.OBJECT_MAX_CARDINALITY: return createObjectMaxCardinality();
-			case OWLPackage.OBJECT_MIN_CARDINALITY: return createObjectMinCardinality();
-			case OWLPackage.DATA_SOME_VALUES_FROM: return createDataSomeValuesFrom();
-			case OWLPackage.DATA_ALL_VALUES_FROM: return createDataAllValuesFrom();
-			case OWLPackage.DATA_HAS_VALUE: return createDataHasValue();
-			case OWLPackage.DATA_EXACT_CARDINALITY: return createDataExactCardinality();
-			case OWLPackage.DATA_MAX_CARDINALITY: return createDataMaxCardinality();
-			case OWLPackage.DATA_MIN_CARDINALITY: return createDataMinCardinality();
-			case OWLPackage.DATA_PROPERTY: return createDataProperty();
-			case OWLPackage.OBJECT_PROPERTY: return createObjectProperty();
-			case OWLPackage.OBJECT_PROPERTY_CHAIN: return createObjectPropertyChain();
-			case OWLPackage.ANNOTATION_PROPERTY: return createAnnotationProperty();
-			case OWLPackage.OWL_DATATYPE: return createOWLDatatype();
-			case OWLPackage.DATA_COMPLEMENT_OF: return createDataComplementOf();
-			case OWLPackage.DATA_UNION_OF: return createDataUnionOf();
-			case OWLPackage.DATA_INTERSECTION_OF: return createDataIntersectionOf();
-			case OWLPackage.DATA_ONE_OF: return createDataOneOf();
-			case OWLPackage.DATATYPE_RESTRICTION: return createDatatypeRestriction();
-			case OWLPackage.DATATYPE_DEFINITION: return createDatatypeDefinition();
-			case OWLPackage.FACET_RESTRICTION: return createFacetRestriction();
-			case OWLPackage.ANNOTATION: return createAnnotation();
-			case OWLPackage.INDIVIDUAL: return createIndividual();
+			case OWLPackage.ONTOLOGY: return (EObject)createOntology();
+			case OWLPackage.OWL_CLASS: return (EObject)createOWLClass();
+			case OWLPackage.OBJECT_UNION_OF: return (EObject)createObjectUnionOf();
+			case OWLPackage.OBJECT_INTERSECTION_OF: return (EObject)createObjectIntersectionOf();
+			case OWLPackage.OBJECT_COMPLEMENT_OF: return (EObject)createObjectComplementOf();
+			case OWLPackage.OBJECT_ONE_OF: return (EObject)createObjectOneOf();
+			case OWLPackage.OBJECT_SOME_VALUES_FROM: return (EObject)createObjectSomeValuesFrom();
+			case OWLPackage.OBJECT_ALL_VALUES_FROM: return (EObject)createObjectAllValuesFrom();
+			case OWLPackage.OBJECT_HAS_VALUE: return (EObject)createObjectHasValue();
+			case OWLPackage.OBJECT_HAS_SELF: return (EObject)createObjectHasSelf();
+			case OWLPackage.OBJECT_EXACT_CARDINALITY: return (EObject)createObjectExactCardinality();
+			case OWLPackage.OBJECT_MAX_CARDINALITY: return (EObject)createObjectMaxCardinality();
+			case OWLPackage.OBJECT_MIN_CARDINALITY: return (EObject)createObjectMinCardinality();
+			case OWLPackage.DATA_SOME_VALUES_FROM: return (EObject)createDataSomeValuesFrom();
+			case OWLPackage.DATA_ALL_VALUES_FROM: return (EObject)createDataAllValuesFrom();
+			case OWLPackage.DATA_HAS_VALUE: return (EObject)createDataHasValue();
+			case OWLPackage.DATA_EXACT_CARDINALITY: return (EObject)createDataExactCardinality();
+			case OWLPackage.DATA_MAX_CARDINALITY: return (EObject)createDataMaxCardinality();
+			case OWLPackage.DATA_MIN_CARDINALITY: return (EObject)createDataMinCardinality();
+			case OWLPackage.DATA_PROPERTY: return (EObject)createDataProperty();
+			case OWLPackage.OBJECT_PROPERTY: return (EObject)createObjectProperty();
+			case OWLPackage.OBJECT_PROPERTY_CHAIN: return (EObject)createObjectPropertyChain();
+			case OWLPackage.ANNOTATION_PROPERTY: return (EObject)createAnnotationProperty();
+			case OWLPackage.OWL_DATATYPE: return (EObject)createOWLDatatype();
+			case OWLPackage.DATA_COMPLEMENT_OF: return (EObject)createDataComplementOf();
+			case OWLPackage.DATA_UNION_OF: return (EObject)createDataUnionOf();
+			case OWLPackage.DATA_INTERSECTION_OF: return (EObject)createDataIntersectionOf();
+			case OWLPackage.DATA_ONE_OF: return (EObject)createDataOneOf();
+			case OWLPackage.DATATYPE_RESTRICTION: return (EObject)createDatatypeRestriction();
+			case OWLPackage.DATATYPE_DEFINITION: return (EObject)createDatatypeDefinition();
+			case OWLPackage.FACET_RESTRICTION: return (EObject)createFacetRestriction();
+			case OWLPackage.ANNOTATION: return (EObject)createAnnotation();
+			case OWLPackage.INDIVIDUAL: return (EObject)createIndividual();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

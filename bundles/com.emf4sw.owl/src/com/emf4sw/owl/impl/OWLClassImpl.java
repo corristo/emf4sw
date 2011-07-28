@@ -47,66 +47,6 @@ import com.emf4sw.rdf.impl.ResourceImpl;
  */
 public class OWLClassImpl extends ResourceImpl implements OWLClass {
 	/**
-	 * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAnnotations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Annotation> annotations;
-
-	/**
-	 * The cached value of the '{@link #getKeys() <em>Keys</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getKeys()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<OWLProperty> keys;
-
-	/**
-	 * The cached value of the '{@link #getSubClassOf() <em>Sub Class Of</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubClassOf()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ClassExpression> subClassOf;
-
-	/**
-	 * The cached value of the '{@link #getSuperClass() <em>Super Class</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSuperClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ClassExpression> superClass;
-
-	/**
-	 * The cached value of the '{@link #getDisjointClasses() <em>Disjoint Classes</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisjointClasses()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ClassExpression> disjointClasses;
-
-	/**
-	 * The cached value of the '{@link #getEquivalentClasses() <em>Equivalent Classes</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEquivalentClasses()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ClassExpression> equivalentClasses;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
@@ -131,11 +71,9 @@ public class OWLClassImpl extends ResourceImpl implements OWLClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Annotation> getAnnotations() {
-		if (annotations == null) {
-			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, OWLPackage.OWL_CLASS__ANNOTATIONS);
-		}
-		return annotations;
+		return (EList<Annotation>)eGet(OWLPackage.Literals.ANNOTATED_ELEMENT__ANNOTATIONS, true);
 	}
 
 	/**
@@ -143,11 +81,9 @@ public class OWLClassImpl extends ResourceImpl implements OWLClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<OWLProperty> getKeys() {
-		if (keys == null) {
-			keys = new EObjectResolvingEList<OWLProperty>(OWLProperty.class, this, OWLPackage.OWL_CLASS__KEYS);
-		}
-		return keys;
+		return (EList<OWLProperty>)eGet(OWLPackage.Literals.CLASS_EXPRESSION__KEYS, true);
 	}
 
 	/**
@@ -155,11 +91,9 @@ public class OWLClassImpl extends ResourceImpl implements OWLClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<ClassExpression> getSubClassOf() {
-		if (subClassOf == null) {
-			subClassOf = new EObjectWithInverseResolvingEList.ManyInverse<ClassExpression>(ClassExpression.class, this, OWLPackage.OWL_CLASS__SUB_CLASS_OF, OWLPackage.CLASS_EXPRESSION__SUPER_CLASS);
-		}
-		return subClassOf;
+		return (EList<ClassExpression>)eGet(OWLPackage.Literals.CLASS_EXPRESSION__SUB_CLASS_OF, true);
 	}
 
 	/**
@@ -167,11 +101,9 @@ public class OWLClassImpl extends ResourceImpl implements OWLClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<ClassExpression> getSuperClass() {
-		if (superClass == null) {
-			superClass = new EObjectWithInverseResolvingEList.ManyInverse<ClassExpression>(ClassExpression.class, this, OWLPackage.OWL_CLASS__SUPER_CLASS, OWLPackage.CLASS_EXPRESSION__SUB_CLASS_OF);
-		}
-		return superClass;
+		return (EList<ClassExpression>)eGet(OWLPackage.Literals.CLASS_EXPRESSION__SUPER_CLASS, true);
 	}
 
 	/**
@@ -179,11 +111,9 @@ public class OWLClassImpl extends ResourceImpl implements OWLClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<ClassExpression> getDisjointClasses() {
-		if (disjointClasses == null) {
-			disjointClasses = new EObjectResolvingEList<ClassExpression>(ClassExpression.class, this, OWLPackage.OWL_CLASS__DISJOINT_CLASSES);
-		}
-		return disjointClasses;
+		return (EList<ClassExpression>)eGet(OWLPackage.Literals.CLASS_EXPRESSION__DISJOINT_CLASSES, true);
 	}
 
 	/**
@@ -191,11 +121,9 @@ public class OWLClassImpl extends ResourceImpl implements OWLClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<ClassExpression> getEquivalentClasses() {
-		if (equivalentClasses == null) {
-			equivalentClasses = new EObjectResolvingEList<ClassExpression>(ClassExpression.class, this, OWLPackage.OWL_CLASS__EQUIVALENT_CLASSES);
-		}
-		return equivalentClasses;
+		return (EList<ClassExpression>)eGet(OWLPackage.Literals.CLASS_EXPRESSION__EQUIVALENT_CLASSES, true);
 	}
 
 	/**
@@ -207,156 +135,6 @@ public class OWLClassImpl extends ResourceImpl implements OWLClass {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OWLPackage.OWL_CLASS__SUB_CLASS_OF:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSubClassOf()).basicAdd(otherEnd, msgs);
-			case OWLPackage.OWL_CLASS__SUPER_CLASS:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getSuperClass()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OWLPackage.OWL_CLASS__ANNOTATIONS:
-				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
-			case OWLPackage.OWL_CLASS__SUB_CLASS_OF:
-				return ((InternalEList<?>)getSubClassOf()).basicRemove(otherEnd, msgs);
-			case OWLPackage.OWL_CLASS__SUPER_CLASS:
-				return ((InternalEList<?>)getSuperClass()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.OWL_CLASS__ANNOTATIONS:
-				return getAnnotations();
-			case OWLPackage.OWL_CLASS__KEYS:
-				return getKeys();
-			case OWLPackage.OWL_CLASS__SUB_CLASS_OF:
-				return getSubClassOf();
-			case OWLPackage.OWL_CLASS__SUPER_CLASS:
-				return getSuperClass();
-			case OWLPackage.OWL_CLASS__DISJOINT_CLASSES:
-				return getDisjointClasses();
-			case OWLPackage.OWL_CLASS__EQUIVALENT_CLASSES:
-				return getEquivalentClasses();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.OWL_CLASS__ANNOTATIONS:
-				getAnnotations().clear();
-				getAnnotations().addAll((Collection<? extends Annotation>)newValue);
-				return;
-			case OWLPackage.OWL_CLASS__KEYS:
-				getKeys().clear();
-				getKeys().addAll((Collection<? extends OWLProperty>)newValue);
-				return;
-			case OWLPackage.OWL_CLASS__SUB_CLASS_OF:
-				getSubClassOf().clear();
-				getSubClassOf().addAll((Collection<? extends ClassExpression>)newValue);
-				return;
-			case OWLPackage.OWL_CLASS__SUPER_CLASS:
-				getSuperClass().clear();
-				getSuperClass().addAll((Collection<? extends ClassExpression>)newValue);
-				return;
-			case OWLPackage.OWL_CLASS__DISJOINT_CLASSES:
-				getDisjointClasses().clear();
-				getDisjointClasses().addAll((Collection<? extends ClassExpression>)newValue);
-				return;
-			case OWLPackage.OWL_CLASS__EQUIVALENT_CLASSES:
-				getEquivalentClasses().clear();
-				getEquivalentClasses().addAll((Collection<? extends ClassExpression>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.OWL_CLASS__ANNOTATIONS:
-				getAnnotations().clear();
-				return;
-			case OWLPackage.OWL_CLASS__KEYS:
-				getKeys().clear();
-				return;
-			case OWLPackage.OWL_CLASS__SUB_CLASS_OF:
-				getSubClassOf().clear();
-				return;
-			case OWLPackage.OWL_CLASS__SUPER_CLASS:
-				getSuperClass().clear();
-				return;
-			case OWLPackage.OWL_CLASS__DISJOINT_CLASSES:
-				getDisjointClasses().clear();
-				return;
-			case OWLPackage.OWL_CLASS__EQUIVALENT_CLASSES:
-				getEquivalentClasses().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.OWL_CLASS__ANNOTATIONS:
-				return annotations != null && !annotations.isEmpty();
-			case OWLPackage.OWL_CLASS__KEYS:
-				return keys != null && !keys.isEmpty();
-			case OWLPackage.OWL_CLASS__SUB_CLASS_OF:
-				return subClassOf != null && !subClassOf.isEmpty();
-			case OWLPackage.OWL_CLASS__SUPER_CLASS:
-				return superClass != null && !superClass.isEmpty();
-			case OWLPackage.OWL_CLASS__DISJOINT_CLASSES:
-				return disjointClasses != null && !disjointClasses.isEmpty();
-			case OWLPackage.OWL_CLASS__EQUIVALENT_CLASSES:
-				return equivalentClasses != null && !equivalentClasses.isEmpty();
-		}
-		return super.eIsSet(featureID);
 	}
 
 	/**

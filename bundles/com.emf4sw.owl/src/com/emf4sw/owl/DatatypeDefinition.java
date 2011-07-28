@@ -6,6 +6,7 @@
  */
 package com.emf4sw.owl;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -23,9 +24,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see com.emf4sw.owl.OWLPackage#getDatatypeDefinition()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface DatatypeDefinition extends EObject {
+public interface DatatypeDefinition extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Data Range</b></em>' reference.
 	 * <!-- begin-user-doc -->

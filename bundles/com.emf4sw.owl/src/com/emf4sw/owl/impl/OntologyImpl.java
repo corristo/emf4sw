@@ -50,16 +50,6 @@ import com.emf4sw.rdf.impl.DocumentGraphImpl;
  */
 public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 	/**
-	 * The cached value of the '{@link #getAnnotations() <em>Annotations</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAnnotations()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Annotation> annotations;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
@@ -84,11 +74,9 @@ public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<Annotation> getAnnotations() {
-		if (annotations == null) {
-			annotations = new EObjectContainmentEList<Annotation>(Annotation.class, this, OWLPackage.ONTOLOGY__ANNOTATIONS);
-		}
-		return annotations;
+		return (EList<Annotation>)eGet(OWLPackage.Literals.ANNOTATED_ELEMENT__ANNOTATIONS, true);
 	}
 
 	/**
@@ -96,8 +84,9 @@ public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<OWLClass> getClasses() {
-		return getNodes().list(OWLPackage.Literals.ONTOLOGY__CLASSES);
+		return (EList<OWLClass>)eGet(OWLPackage.Literals.ONTOLOGY__CLASSES, true);
 	}
 
 	/**
@@ -105,8 +94,9 @@ public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<DataProperty> getDataProperties() {
-		return getNodes().list(OWLPackage.Literals.ONTOLOGY__DATA_PROPERTIES);
+		return (EList<DataProperty>)eGet(OWLPackage.Literals.ONTOLOGY__DATA_PROPERTIES, true);
 	}
 
 	/**
@@ -114,8 +104,9 @@ public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<ObjectProperty> getObjectProperties() {
-		return getNodes().list(OWLPackage.Literals.ONTOLOGY__OBJECT_PROPERTIES);
+		return (EList<ObjectProperty>)eGet(OWLPackage.Literals.ONTOLOGY__OBJECT_PROPERTIES, true);
 	}
 
 	/**
@@ -123,8 +114,9 @@ public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<DataRange> getDataRanges() {
-		return getNodes().list(OWLPackage.Literals.ONTOLOGY__DATA_RANGES);
+		return (EList<DataRange>)eGet(OWLPackage.Literals.ONTOLOGY__DATA_RANGES, true);
 	}
 
 	/**
@@ -132,8 +124,9 @@ public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<ClassExpression> getClassExpressions() {
-		return getNodes().list(OWLPackage.Literals.ONTOLOGY__CLASS_EXPRESSIONS);
+		return (EList<ClassExpression>)eGet(OWLPackage.Literals.ONTOLOGY__CLASS_EXPRESSIONS, true);
 	}
 
 	/**
@@ -141,8 +134,9 @@ public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<OWLDatatype> getOwlDatatypes() {
-		return getNodes().list(OWLPackage.Literals.ONTOLOGY__OWL_DATATYPES);
+		return (EList<OWLDatatype>)eGet(OWLPackage.Literals.ONTOLOGY__OWL_DATATYPES, true);
 	}
 
 	/**
@@ -154,158 +148,6 @@ public class OntologyImpl extends DocumentGraphImpl implements Ontology {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OWLPackage.ONTOLOGY__ANNOTATIONS:
-				return ((InternalEList<?>)getAnnotations()).basicRemove(otherEnd, msgs);
-			case OWLPackage.ONTOLOGY__CLASSES:
-				return ((InternalEList<?>)getClasses()).basicRemove(otherEnd, msgs);
-			case OWLPackage.ONTOLOGY__DATA_PROPERTIES:
-				return ((InternalEList<?>)getDataProperties()).basicRemove(otherEnd, msgs);
-			case OWLPackage.ONTOLOGY__OBJECT_PROPERTIES:
-				return ((InternalEList<?>)getObjectProperties()).basicRemove(otherEnd, msgs);
-			case OWLPackage.ONTOLOGY__DATA_RANGES:
-				return ((InternalEList<?>)getDataRanges()).basicRemove(otherEnd, msgs);
-			case OWLPackage.ONTOLOGY__CLASS_EXPRESSIONS:
-				return ((InternalEList<?>)getClassExpressions()).basicRemove(otherEnd, msgs);
-			case OWLPackage.ONTOLOGY__OWL_DATATYPES:
-				return ((InternalEList<?>)getOwlDatatypes()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.ONTOLOGY__ANNOTATIONS:
-				return getAnnotations();
-			case OWLPackage.ONTOLOGY__CLASSES:
-				return getClasses();
-			case OWLPackage.ONTOLOGY__DATA_PROPERTIES:
-				return getDataProperties();
-			case OWLPackage.ONTOLOGY__OBJECT_PROPERTIES:
-				return getObjectProperties();
-			case OWLPackage.ONTOLOGY__DATA_RANGES:
-				return getDataRanges();
-			case OWLPackage.ONTOLOGY__CLASS_EXPRESSIONS:
-				return getClassExpressions();
-			case OWLPackage.ONTOLOGY__OWL_DATATYPES:
-				return getOwlDatatypes();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.ONTOLOGY__ANNOTATIONS:
-				getAnnotations().clear();
-				getAnnotations().addAll((Collection<? extends Annotation>)newValue);
-				return;
-			case OWLPackage.ONTOLOGY__CLASSES:
-				getClasses().clear();
-				getClasses().addAll((Collection<? extends OWLClass>)newValue);
-				return;
-			case OWLPackage.ONTOLOGY__DATA_PROPERTIES:
-				getDataProperties().clear();
-				getDataProperties().addAll((Collection<? extends DataProperty>)newValue);
-				return;
-			case OWLPackage.ONTOLOGY__OBJECT_PROPERTIES:
-				getObjectProperties().clear();
-				getObjectProperties().addAll((Collection<? extends ObjectProperty>)newValue);
-				return;
-			case OWLPackage.ONTOLOGY__DATA_RANGES:
-				getDataRanges().clear();
-				getDataRanges().addAll((Collection<? extends DataRange>)newValue);
-				return;
-			case OWLPackage.ONTOLOGY__CLASS_EXPRESSIONS:
-				getClassExpressions().clear();
-				getClassExpressions().addAll((Collection<? extends ClassExpression>)newValue);
-				return;
-			case OWLPackage.ONTOLOGY__OWL_DATATYPES:
-				getOwlDatatypes().clear();
-				getOwlDatatypes().addAll((Collection<? extends OWLDatatype>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.ONTOLOGY__ANNOTATIONS:
-				getAnnotations().clear();
-				return;
-			case OWLPackage.ONTOLOGY__CLASSES:
-				getClasses().clear();
-				return;
-			case OWLPackage.ONTOLOGY__DATA_PROPERTIES:
-				getDataProperties().clear();
-				return;
-			case OWLPackage.ONTOLOGY__OBJECT_PROPERTIES:
-				getObjectProperties().clear();
-				return;
-			case OWLPackage.ONTOLOGY__DATA_RANGES:
-				getDataRanges().clear();
-				return;
-			case OWLPackage.ONTOLOGY__CLASS_EXPRESSIONS:
-				getClassExpressions().clear();
-				return;
-			case OWLPackage.ONTOLOGY__OWL_DATATYPES:
-				getOwlDatatypes().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.ONTOLOGY__ANNOTATIONS:
-				return annotations != null && !annotations.isEmpty();
-			case OWLPackage.ONTOLOGY__CLASSES:
-				return !getClasses().isEmpty();
-			case OWLPackage.ONTOLOGY__DATA_PROPERTIES:
-				return !getDataProperties().isEmpty();
-			case OWLPackage.ONTOLOGY__OBJECT_PROPERTIES:
-				return !getObjectProperties().isEmpty();
-			case OWLPackage.ONTOLOGY__DATA_RANGES:
-				return !getDataRanges().isEmpty();
-			case OWLPackage.ONTOLOGY__CLASS_EXPRESSIONS:
-				return !getClassExpressions().isEmpty();
-			case OWLPackage.ONTOLOGY__OWL_DATATYPES:
-				return !getOwlDatatypes().isEmpty();
-		}
-		return super.eIsSet(featureID);
 	}
 
 	/**

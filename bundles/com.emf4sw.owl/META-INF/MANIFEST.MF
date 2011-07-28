@@ -13,5 +13,6 @@ Export-Package:
  com.emf4sw.owl.vocabulary
 Bundle-Vendor: eclipselabs
 Require-Bundle: com.emf4sw.rdf,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.cdo;bundle-version="4.0.1"
 

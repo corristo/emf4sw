@@ -9,6 +9,7 @@ package com.emf4sw.owl;
 import org.eclipse.emf.ecore.EObject;
 
 import com.emf4sw.rdf.Literal;
+import org.eclipse.emf.cdo.CDOObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,9 +26,10 @@ import com.emf4sw.rdf.Literal;
  *
  * @see com.emf4sw.owl.OWLPackage#getFacetRestriction()
  * @model
+ * @extends CDOObject
  * @generated
  */
-public interface FacetRestriction extends EObject {
+public interface FacetRestriction extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Datatype</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -8,6 +8,7 @@ package com.emf4sw.owl.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.internal.cdo.CDOObjectImpl;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -31,27 +32,7 @@ import com.emf4sw.rdf.Literal;
  *
  * @generated
  */
-public class FacetRestrictionImpl extends MinimalEObjectImpl.Container implements FacetRestriction {
-	/**
-	 * The cached value of the '{@link #getDatatype() <em>Datatype</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDatatype()
-	 * @generated
-	 * @ordered
-	 */
-	protected DataRange datatype;
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected Literal value;
-
+public class FacetRestrictionImpl extends CDOObjectImpl implements FacetRestriction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -76,16 +57,9 @@ public class FacetRestrictionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataRange getDatatype() {
-		if (datatype != null && datatype.eIsProxy()) {
-			InternalEObject oldDatatype = (InternalEObject)datatype;
-			datatype = (DataRange)eResolveProxy(oldDatatype);
-			if (datatype != oldDatatype) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OWLPackage.FACET_RESTRICTION__DATATYPE, oldDatatype, datatype));
-			}
-		}
-		return datatype;
+	@Override
+	protected int eStaticFeatureCount() {
+		return 0;
 	}
 
 	/**
@@ -93,8 +67,8 @@ public class FacetRestrictionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataRange basicGetDatatype() {
-		return datatype;
+	public DataRange getDatatype() {
+		return (DataRange)eGet(OWLPackage.Literals.FACET_RESTRICTION__DATATYPE, true);
 	}
 
 	/**
@@ -103,10 +77,7 @@ public class FacetRestrictionImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public void setDatatype(DataRange newDatatype) {
-		DataRange oldDatatype = datatype;
-		datatype = newDatatype;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.FACET_RESTRICTION__DATATYPE, oldDatatype, datatype));
+		eSet(OWLPackage.Literals.FACET_RESTRICTION__DATATYPE, newDatatype);
 	}
 
 	/**
@@ -115,24 +86,7 @@ public class FacetRestrictionImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public Literal getValue() {
-		if (value != null && value.eIsProxy()) {
-			InternalEObject oldValue = (InternalEObject)value;
-			value = (Literal)eResolveProxy(oldValue);
-			if (value != oldValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OWLPackage.FACET_RESTRICTION__VALUE, oldValue, value));
-			}
-		}
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Literal basicGetValue() {
-		return value;
+		return (Literal)eGet(OWLPackage.Literals.FACET_RESTRICTION__VALUE, true);
 	}
 
 	/**
@@ -141,80 +95,7 @@ public class FacetRestrictionImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public void setValue(Literal newValue) {
-		Literal oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.FACET_RESTRICTION__VALUE, oldValue, value));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.FACET_RESTRICTION__DATATYPE:
-				if (resolve) return getDatatype();
-				return basicGetDatatype();
-			case OWLPackage.FACET_RESTRICTION__VALUE:
-				if (resolve) return getValue();
-				return basicGetValue();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.FACET_RESTRICTION__DATATYPE:
-				setDatatype((DataRange)newValue);
-				return;
-			case OWLPackage.FACET_RESTRICTION__VALUE:
-				setValue((Literal)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.FACET_RESTRICTION__DATATYPE:
-				setDatatype((DataRange)null);
-				return;
-			case OWLPackage.FACET_RESTRICTION__VALUE:
-				setValue((Literal)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.FACET_RESTRICTION__DATATYPE:
-				return datatype != null;
-			case OWLPackage.FACET_RESTRICTION__VALUE:
-				return value != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(OWLPackage.Literals.FACET_RESTRICTION__VALUE, newValue);
 	}
 
 } //FacetRestrictionImpl

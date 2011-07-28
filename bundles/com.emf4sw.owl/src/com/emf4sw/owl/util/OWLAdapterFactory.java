@@ -6,6 +6,7 @@
  */
 package com.emf4sw.owl.util;
 
+import com.emf4sw.owl.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;

@@ -30,16 +30,6 @@ import com.emf4sw.rdf.Resource;
  */
 public class ObjectHasValueImpl extends ObjectPropertyRestrictionImpl implements ObjectHasValue {
 	/**
-	 * The cached value of the '{@link #getHasValue() <em>Has Value</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHasValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected Resource hasValue;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -64,24 +54,7 @@ public class ObjectHasValueImpl extends ObjectPropertyRestrictionImpl implements
 	 * @generated
 	 */
 	public Resource getHasValue() {
-		if (hasValue != null && hasValue.eIsProxy()) {
-			InternalEObject oldHasValue = (InternalEObject)hasValue;
-			hasValue = (Resource)eResolveProxy(oldHasValue);
-			if (hasValue != oldHasValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OWLPackage.OBJECT_HAS_VALUE__HAS_VALUE, oldHasValue, hasValue));
-			}
-		}
-		return hasValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Resource basicGetHasValue() {
-		return hasValue;
+		return (Resource)eGet(OWLPackage.Literals.OBJECT_HAS_VALUE__HAS_VALUE, true);
 	}
 
 	/**
@@ -90,69 +63,7 @@ public class ObjectHasValueImpl extends ObjectPropertyRestrictionImpl implements
 	 * @generated
 	 */
 	public void setHasValue(Resource newHasValue) {
-		Resource oldHasValue = hasValue;
-		hasValue = newHasValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.OBJECT_HAS_VALUE__HAS_VALUE, oldHasValue, hasValue));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_HAS_VALUE__HAS_VALUE:
-				if (resolve) return getHasValue();
-				return basicGetHasValue();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_HAS_VALUE__HAS_VALUE:
-				setHasValue((Resource)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_HAS_VALUE__HAS_VALUE:
-				setHasValue((Resource)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_HAS_VALUE__HAS_VALUE:
-				return hasValue != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(OWLPackage.Literals.OBJECT_HAS_VALUE__HAS_VALUE, newHasValue);
 	}
 
 } //ObjectHasValueImpl

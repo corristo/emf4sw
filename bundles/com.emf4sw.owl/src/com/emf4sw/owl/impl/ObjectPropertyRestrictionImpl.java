@@ -37,34 +37,6 @@ import com.emf4sw.rdf.RDFPackage;
  */
 public abstract class ObjectPropertyRestrictionImpl extends ClassExpressionImpl implements ObjectPropertyRestriction {
 	/**
-	 * The default value of the '{@link #getNodeID() <em>Node ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNodeID()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NODE_ID_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getNodeID() <em>Node ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNodeID()
-	 * @generated
-	 * @ordered
-	 */
-	protected String nodeID = NODE_ID_EDEFAULT;
-	/**
-	 * The cached value of the '{@link #getProperty() <em>Property</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProperty()
-	 * @generated
-	 * @ordered
-	 */
-	protected ObjectProperty property;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -89,7 +61,7 @@ public abstract class ObjectPropertyRestrictionImpl extends ClassExpressionImpl 
 	 * @generated
 	 */
 	public String getNodeID() {
-		return nodeID;
+		return (String)eGet(RDFPackage.Literals.BLANK_NODE__NODE_ID, true);
 	}
 
 	/**
@@ -98,10 +70,7 @@ public abstract class ObjectPropertyRestrictionImpl extends ClassExpressionImpl 
 	 * @generated
 	 */
 	public void setNodeID(String newNodeID) {
-		String oldNodeID = nodeID;
-		nodeID = newNodeID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.OBJECT_PROPERTY_RESTRICTION__NODE_ID, oldNodeID, nodeID));
+		eSet(RDFPackage.Literals.BLANK_NODE__NODE_ID, newNodeID);
 	}
 
 	/**
@@ -110,18 +79,7 @@ public abstract class ObjectPropertyRestrictionImpl extends ClassExpressionImpl 
 	 * @generated
 	 */
 	public RDFGraph getGraph() {
-		if (eContainerFeatureID() != OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH) return null;
-		return (RDFGraph)eContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGraph(RDFGraph newGraph, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newGraph, OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH, msgs);
-		return msgs;
+		return (RDFGraph)eGet(RDFPackage.Literals.BLANK_NODE__GRAPH, true);
 	}
 
 	/**
@@ -130,19 +88,7 @@ public abstract class ObjectPropertyRestrictionImpl extends ClassExpressionImpl 
 	 * @generated
 	 */
 	public void setGraph(RDFGraph newGraph) {
-		if (newGraph != eInternalContainer() || (eContainerFeatureID() != OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH && newGraph != null)) {
-			if (EcoreUtil.isAncestor(this, newGraph))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newGraph != null)
-				msgs = ((InternalEObject)newGraph).eInverseAdd(this, RDFPackage.RDF_GRAPH__BLANK_NODES, RDFGraph.class, msgs);
-			msgs = basicSetGraph(newGraph, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH, newGraph, newGraph));
+		eSet(RDFPackage.Literals.BLANK_NODE__GRAPH, newGraph);
 	}
 
 	/**
@@ -151,24 +97,7 @@ public abstract class ObjectPropertyRestrictionImpl extends ClassExpressionImpl 
 	 * @generated
 	 */
 	public ObjectProperty getProperty() {
-		if (property != null && property.eIsProxy()) {
-			InternalEObject oldProperty = (InternalEObject)property;
-			property = (ObjectProperty)eResolveProxy(oldProperty);
-			if (property != oldProperty) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OWLPackage.OBJECT_PROPERTY_RESTRICTION__PROPERTY, oldProperty, property));
-			}
-		}
-		return property;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ObjectProperty basicGetProperty() {
-		return property;
+		return (ObjectProperty)eGet(OWLPackage.Literals.OBJECT_PROPERTY_RESTRICTION__PROPERTY, true);
 	}
 
 	/**
@@ -177,133 +106,7 @@ public abstract class ObjectPropertyRestrictionImpl extends ClassExpressionImpl 
 	 * @generated
 	 */
 	public void setProperty(ObjectProperty newProperty) {
-		ObjectProperty oldProperty = property;
-		property = newProperty;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.OBJECT_PROPERTY_RESTRICTION__PROPERTY, oldProperty, property));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetGraph((RDFGraph)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH:
-				return basicSetGraph(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH:
-				return eInternalContainer().eInverseRemove(this, RDFPackage.RDF_GRAPH__BLANK_NODES, RDFGraph.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__NODE_ID:
-				return getNodeID();
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH:
-				return getGraph();
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__PROPERTY:
-				if (resolve) return getProperty();
-				return basicGetProperty();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__NODE_ID:
-				setNodeID((String)newValue);
-				return;
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH:
-				setGraph((RDFGraph)newValue);
-				return;
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__PROPERTY:
-				setProperty((ObjectProperty)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__NODE_ID:
-				setNodeID(NODE_ID_EDEFAULT);
-				return;
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH:
-				setGraph((RDFGraph)null);
-				return;
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__PROPERTY:
-				setProperty((ObjectProperty)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__NODE_ID:
-				return NODE_ID_EDEFAULT == null ? nodeID != null : !NODE_ID_EDEFAULT.equals(nodeID);
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__GRAPH:
-				return getGraph() != null;
-			case OWLPackage.OBJECT_PROPERTY_RESTRICTION__PROPERTY:
-				return property != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(OWLPackage.Literals.OBJECT_PROPERTY_RESTRICTION__PROPERTY, newProperty);
 	}
 
 	/**
@@ -338,22 +141,6 @@ public abstract class ObjectPropertyRestrictionImpl extends ClassExpressionImpl 
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nodeID: ");
-		result.append(nodeID);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ObjectPropertyRestrictionImpl

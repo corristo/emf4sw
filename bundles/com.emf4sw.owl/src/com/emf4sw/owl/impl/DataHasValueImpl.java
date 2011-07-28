@@ -32,26 +32,6 @@ import com.emf4sw.rdf.Literal;
  */
 public class DataHasValueImpl extends DataPropertyRestrictionImpl implements DataHasValue {
 	/**
-	 * The cached value of the '{@link #getHasValue() <em>Has Value</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getHasValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected Literal hasValue;
-
-	/**
-	 * The cached value of the '{@link #getProperty() <em>Property</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProperty()
-	 * @generated
-	 * @ordered
-	 */
-	protected DataProperty property;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -76,24 +56,7 @@ public class DataHasValueImpl extends DataPropertyRestrictionImpl implements Dat
 	 * @generated
 	 */
 	public Literal getHasValue() {
-		if (hasValue != null && hasValue.eIsProxy()) {
-			InternalEObject oldHasValue = (InternalEObject)hasValue;
-			hasValue = (Literal)eResolveProxy(oldHasValue);
-			if (hasValue != oldHasValue) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OWLPackage.DATA_HAS_VALUE__HAS_VALUE, oldHasValue, hasValue));
-			}
-		}
-		return hasValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Literal basicGetHasValue() {
-		return hasValue;
+		return (Literal)eGet(OWLPackage.Literals.DATA_HAS_VALUE__HAS_VALUE, true);
 	}
 
 	/**
@@ -102,10 +65,7 @@ public class DataHasValueImpl extends DataPropertyRestrictionImpl implements Dat
 	 * @generated
 	 */
 	public void setHasValue(Literal newHasValue) {
-		Literal oldHasValue = hasValue;
-		hasValue = newHasValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.DATA_HAS_VALUE__HAS_VALUE, oldHasValue, hasValue));
+		eSet(OWLPackage.Literals.DATA_HAS_VALUE__HAS_VALUE, newHasValue);
 	}
 
 	/**
@@ -114,24 +74,7 @@ public class DataHasValueImpl extends DataPropertyRestrictionImpl implements Dat
 	 * @generated
 	 */
 	public DataProperty getProperty() {
-		if (property != null && property.eIsProxy()) {
-			InternalEObject oldProperty = (InternalEObject)property;
-			property = (DataProperty)eResolveProxy(oldProperty);
-			if (property != oldProperty) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OWLPackage.DATA_HAS_VALUE__PROPERTY, oldProperty, property));
-			}
-		}
-		return property;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DataProperty basicGetProperty() {
-		return property;
+		return (DataProperty)eGet(OWLPackage.Literals.DATA_HAS_VALUE__PROPERTY, true);
 	}
 
 	/**
@@ -140,80 +83,7 @@ public class DataHasValueImpl extends DataPropertyRestrictionImpl implements Dat
 	 * @generated
 	 */
 	public void setProperty(DataProperty newProperty) {
-		DataProperty oldProperty = property;
-		property = newProperty;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.DATA_HAS_VALUE__PROPERTY, oldProperty, property));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.DATA_HAS_VALUE__HAS_VALUE:
-				if (resolve) return getHasValue();
-				return basicGetHasValue();
-			case OWLPackage.DATA_HAS_VALUE__PROPERTY:
-				if (resolve) return getProperty();
-				return basicGetProperty();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.DATA_HAS_VALUE__HAS_VALUE:
-				setHasValue((Literal)newValue);
-				return;
-			case OWLPackage.DATA_HAS_VALUE__PROPERTY:
-				setProperty((DataProperty)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.DATA_HAS_VALUE__HAS_VALUE:
-				setHasValue((Literal)null);
-				return;
-			case OWLPackage.DATA_HAS_VALUE__PROPERTY:
-				setProperty((DataProperty)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.DATA_HAS_VALUE__HAS_VALUE:
-				return hasValue != null;
-			case OWLPackage.DATA_HAS_VALUE__PROPERTY:
-				return property != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(OWLPackage.Literals.DATA_HAS_VALUE__PROPERTY, newProperty);
 	}
 
 } //DataHasValueImpl

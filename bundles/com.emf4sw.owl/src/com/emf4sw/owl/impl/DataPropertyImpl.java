@@ -35,46 +35,6 @@ import com.emf4sw.owl.impl.notify.ClassPropertyTripleAdapter.DataPropertyTripleA
  */
 public class DataPropertyImpl extends ClassPropertyImpl implements DataProperty {
 	/**
-	 * The cached value of the '{@link #getRange() <em>Range</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRange()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataRange> range;
-
-	/**
-	 * The cached value of the '{@link #getEquivalentProperties() <em>Equivalent Properties</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEquivalentProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataProperty> equivalentProperties;
-
-	/**
-	 * The cached value of the '{@link #getSubPropertyOf() <em>Sub Property Of</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSubPropertyOf()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataProperty> subPropertyOf;
-
-	/**
-	 * The cached value of the '{@link #getDisjointProperties() <em>Disjoint Properties</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDisjointProperties()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataProperty> disjointProperties;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
@@ -99,67 +59,9 @@ public class DataPropertyImpl extends ClassPropertyImpl implements DataProperty 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	public EList<DataRange> getRange() {
-		if (range == null) {
-			range = new EObjectResolvingEList<DataRange>(DataRange.class, this, OWLPackage.DATA_PROPERTY__RANGE);
-		}
-		return range;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<DataProperty> getEquivalentProperties() {
-		if (equivalentProperties == null) {
-			equivalentProperties = new EObjectResolvingEList<DataProperty>(DataProperty.class, this, OWLPackage.DATA_PROPERTY__EQUIVALENT_PROPERTIES);
-		}
-		return equivalentProperties;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<DataProperty> getSubPropertyOf() {
-		if (subPropertyOf == null) {
-			subPropertyOf = new EObjectResolvingEList<DataProperty>(DataProperty.class, this, OWLPackage.DATA_PROPERTY__SUB_PROPERTY_OF);
-		}
-		return subPropertyOf;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<DataProperty> getDisjointProperties() {
-		if (disjointProperties == null) {
-			disjointProperties = new EObjectResolvingEList<DataProperty>(DataProperty.class, this, OWLPackage.DATA_PROPERTY__DISJOINT_PROPERTIES);
-		}
-		return disjointProperties;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.DATA_PROPERTY__RANGE:
-				return getRange();
-			case OWLPackage.DATA_PROPERTY__EQUIVALENT_PROPERTIES:
-				return getEquivalentProperties();
-			case OWLPackage.DATA_PROPERTY__SUB_PROPERTY_OF:
-				return getSubPropertyOf();
-			case OWLPackage.DATA_PROPERTY__DISJOINT_PROPERTIES:
-				return getDisjointProperties();
-		}
-		return super.eGet(featureID, resolve, coreType);
+		return (EList<DataRange>)eGet(OWLPackage.Literals.DATA_PROPERTY__RANGE, true);
 	}
 
 	/**
@@ -168,27 +70,8 @@ public class DataPropertyImpl extends ClassPropertyImpl implements DataProperty 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.DATA_PROPERTY__RANGE:
-				getRange().clear();
-				getRange().addAll((Collection<? extends DataRange>)newValue);
-				return;
-			case OWLPackage.DATA_PROPERTY__EQUIVALENT_PROPERTIES:
-				getEquivalentProperties().clear();
-				getEquivalentProperties().addAll((Collection<? extends DataProperty>)newValue);
-				return;
-			case OWLPackage.DATA_PROPERTY__SUB_PROPERTY_OF:
-				getSubPropertyOf().clear();
-				getSubPropertyOf().addAll((Collection<? extends DataProperty>)newValue);
-				return;
-			case OWLPackage.DATA_PROPERTY__DISJOINT_PROPERTIES:
-				getDisjointProperties().clear();
-				getDisjointProperties().addAll((Collection<? extends DataProperty>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
+	public EList<DataProperty> getEquivalentProperties() {
+		return (EList<DataProperty>)eGet(OWLPackage.Literals.DATA_PROPERTY__EQUIVALENT_PROPERTIES, true);
 	}
 
 	/**
@@ -196,23 +79,9 @@ public class DataPropertyImpl extends ClassPropertyImpl implements DataProperty 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.DATA_PROPERTY__RANGE:
-				getRange().clear();
-				return;
-			case OWLPackage.DATA_PROPERTY__EQUIVALENT_PROPERTIES:
-				getEquivalentProperties().clear();
-				return;
-			case OWLPackage.DATA_PROPERTY__SUB_PROPERTY_OF:
-				getSubPropertyOf().clear();
-				return;
-			case OWLPackage.DATA_PROPERTY__DISJOINT_PROPERTIES:
-				getDisjointProperties().clear();
-				return;
-		}
-		super.eUnset(featureID);
+	@SuppressWarnings("unchecked")
+	public EList<DataProperty> getSubPropertyOf() {
+		return (EList<DataProperty>)eGet(OWLPackage.Literals.DATA_PROPERTY__SUB_PROPERTY_OF, true);
 	}
 
 	/**
@@ -220,19 +89,9 @@ public class DataPropertyImpl extends ClassPropertyImpl implements DataProperty 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.DATA_PROPERTY__RANGE:
-				return range != null && !range.isEmpty();
-			case OWLPackage.DATA_PROPERTY__EQUIVALENT_PROPERTIES:
-				return equivalentProperties != null && !equivalentProperties.isEmpty();
-			case OWLPackage.DATA_PROPERTY__SUB_PROPERTY_OF:
-				return subPropertyOf != null && !subPropertyOf.isEmpty();
-			case OWLPackage.DATA_PROPERTY__DISJOINT_PROPERTIES:
-				return disjointProperties != null && !disjointProperties.isEmpty();
-		}
-		return super.eIsSet(featureID);
+	@SuppressWarnings("unchecked")
+	public EList<DataProperty> getDisjointProperties() {
+		return (EList<DataProperty>)eGet(OWLPackage.Literals.DATA_PROPERTY__DISJOINT_PROPERTIES, true);
 	}
 
 } //DataPropertyImpl

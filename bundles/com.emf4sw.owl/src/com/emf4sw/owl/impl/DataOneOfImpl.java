@@ -31,16 +31,6 @@ import com.emf4sw.rdf.Literal;
  */
 public class DataOneOfImpl extends DataRangeImpl implements DataOneOf {
 	/**
-	 * The cached value of the '{@link #getOneOf() <em>One Of</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOneOf()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Literal> oneOf;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -64,71 +54,9 @@ public class DataOneOfImpl extends DataRangeImpl implements DataOneOf {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Literal> getOneOf() {
-		if (oneOf == null) {
-			oneOf = new EObjectResolvingEList<Literal>(Literal.class, this, OWLPackage.DATA_ONE_OF__ONE_OF);
-		}
-		return oneOf;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.DATA_ONE_OF__ONE_OF:
-				return getOneOf();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.DATA_ONE_OF__ONE_OF:
-				getOneOf().clear();
-				getOneOf().addAll((Collection<? extends Literal>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.DATA_ONE_OF__ONE_OF:
-				getOneOf().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.DATA_ONE_OF__ONE_OF:
-				return oneOf != null && !oneOf.isEmpty();
-		}
-		return super.eIsSet(featureID);
+	public EList<Literal> getOneOf() {
+		return (EList<Literal>)eGet(OWLPackage.Literals.DATA_ONE_OF__ONE_OF, true);
 	}
 
 } //DataOneOfImpl

@@ -6,6 +6,7 @@
  */
 package com.emf4sw.owl;
 
+import org.eclipse.emf.cdo.CDOObject;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -23,9 +24,10 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see com.emf4sw.owl.OWLPackage#getAnnotatedElement()
  * @model abstract="true"
+ * @extends CDOObject
  * @generated
  */
-public interface AnnotatedElement extends EObject {
+public interface AnnotatedElement extends CDOObject {
 	/**
 	 * Returns the value of the '<em><b>Annotations</b></em>' containment reference list.
 	 * The list contents are of type {@link com.emf4sw.owl.Annotation}.

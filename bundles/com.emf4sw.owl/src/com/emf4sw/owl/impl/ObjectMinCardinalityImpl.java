@@ -31,36 +31,6 @@ import com.emf4sw.owl.ObjectMinCardinality;
  */
 public class ObjectMinCardinalityImpl extends ObjectPropertyRestrictionImpl implements ObjectMinCardinality {
 	/**
-	 * The default value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCardinality()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int CARDINALITY_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCardinality()
-	 * @generated
-	 * @ordered
-	 */
-	protected int cardinality = CARDINALITY_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getOnClass() <em>On Class</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOnClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected ClassExpression onClass;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -85,7 +55,7 @@ public class ObjectMinCardinalityImpl extends ObjectPropertyRestrictionImpl impl
 	 * @generated
 	 */
 	public int getCardinality() {
-		return cardinality;
+		return (Integer)eGet(OWLPackage.Literals.OBJECT_MIN_CARDINALITY__CARDINALITY, true);
 	}
 
 	/**
@@ -94,10 +64,7 @@ public class ObjectMinCardinalityImpl extends ObjectPropertyRestrictionImpl impl
 	 * @generated
 	 */
 	public void setCardinality(int newCardinality) {
-		int oldCardinality = cardinality;
-		cardinality = newCardinality;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.OBJECT_MIN_CARDINALITY__CARDINALITY, oldCardinality, cardinality));
+		eSet(OWLPackage.Literals.OBJECT_MIN_CARDINALITY__CARDINALITY, newCardinality);
 	}
 
 	/**
@@ -106,24 +73,7 @@ public class ObjectMinCardinalityImpl extends ObjectPropertyRestrictionImpl impl
 	 * @generated
 	 */
 	public ClassExpression getOnClass() {
-		if (onClass != null && onClass.eIsProxy()) {
-			InternalEObject oldOnClass = (InternalEObject)onClass;
-			onClass = (ClassExpression)eResolveProxy(oldOnClass);
-			if (onClass != oldOnClass) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, OWLPackage.OBJECT_MIN_CARDINALITY__ON_CLASS, oldOnClass, onClass));
-			}
-		}
-		return onClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ClassExpression basicGetOnClass() {
-		return onClass;
+		return (ClassExpression)eGet(OWLPackage.Literals.OBJECT_MIN_CARDINALITY__ON_CLASS, true);
 	}
 
 	/**
@@ -132,79 +82,7 @@ public class ObjectMinCardinalityImpl extends ObjectPropertyRestrictionImpl impl
 	 * @generated
 	 */
 	public void setOnClass(ClassExpression newOnClass) {
-		ClassExpression oldOnClass = onClass;
-		onClass = newOnClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OWLPackage.OBJECT_MIN_CARDINALITY__ON_CLASS, oldOnClass, onClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_MIN_CARDINALITY__CARDINALITY:
-				return getCardinality();
-			case OWLPackage.OBJECT_MIN_CARDINALITY__ON_CLASS:
-				if (resolve) return getOnClass();
-				return basicGetOnClass();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_MIN_CARDINALITY__CARDINALITY:
-				setCardinality((Integer)newValue);
-				return;
-			case OWLPackage.OBJECT_MIN_CARDINALITY__ON_CLASS:
-				setOnClass((ClassExpression)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_MIN_CARDINALITY__CARDINALITY:
-				setCardinality(CARDINALITY_EDEFAULT);
-				return;
-			case OWLPackage.OBJECT_MIN_CARDINALITY__ON_CLASS:
-				setOnClass((ClassExpression)null);
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case OWLPackage.OBJECT_MIN_CARDINALITY__CARDINALITY:
-				return cardinality != CARDINALITY_EDEFAULT;
-			case OWLPackage.OBJECT_MIN_CARDINALITY__ON_CLASS:
-				return onClass != null;
-		}
-		return super.eIsSet(featureID);
+		eSet(OWLPackage.Literals.OBJECT_MIN_CARDINALITY__ON_CLASS, newOnClass);
 	}
 
 	/**
